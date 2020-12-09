@@ -18,6 +18,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
+if (ENV === 'production') {
+    app.use(express.static(path.join(__dirname, './client/build')));
+    app.use ((req, res) => {
+        res.sendFile(path.join(__dirname, './client/build/index.html'));
+    });
+}
 
 // CHURCHES ROUTES //
 // get all churches
