@@ -39,7 +39,7 @@ const Map = () => {
             {...viewport}
             mapStyle='mapbox://styles/mapbox/streets-v9'
             maxZoom={20}
-            mapboxApiAccessToken= {process.env.REACT_APP_MAPBOX_TOKEN}
+            mapboxApiAccessToken= 'pk.eyJ1IjoibGJvb2ciLCJhIjoiY2tpaG02dmF5MG05bDJxb2ludzIzMWplOCJ9.fysOlhCChA-waOvtdvjP3A'
             onViewportChange={(newViewport) => {
                 setViewport({ ...newViewport });
               }}
