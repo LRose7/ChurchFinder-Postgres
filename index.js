@@ -3,7 +3,6 @@ const path = require('path');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 const cors = require('cors');
 const pool = require('./database');
 
@@ -15,7 +14,6 @@ const app = express();
 // middleware
 app.use(compression());
 app.use(cors());
-app.use(logger('dev'));
 app.use(express.json()); // gives access to req.body
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
